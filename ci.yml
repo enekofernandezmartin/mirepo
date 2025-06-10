@@ -6,3 +6,8 @@ on:
   schedule:
     - cron:'0 0 * * 5'
 jobs:
+  build_job:
+    runs_on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: ./build_cnt.sh
